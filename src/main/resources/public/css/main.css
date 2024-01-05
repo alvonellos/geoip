@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    background-color: #f5f5f5;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Courier New', Courier, monospace;
+    color: #6c63ff;
+}
+
+a {
+    color: #6c63ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #6c63ff;
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #eee;
+}
+
+/* Button Styles */
+.btn {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #524ad2;
+}
+
+/* Example Styles */
+.example-section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.example-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.example-description {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.example-link {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.example-link a {
+    font-size: 16px;
+}
+

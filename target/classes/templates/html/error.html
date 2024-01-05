@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:replace="fragments/header.html :: header(title, cssFile)"></div>
+  <body>
+   <div>
+       <p>
+           <a th:href="@{/}">Home</a>
+       </p>
+       <p>Sorry, we ran into a problem. </p>
+   </div>
+  </body>
+
+<div th:replace="fragments/footer.html :: footer"></div>
+</html>

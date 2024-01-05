@@ -1,0 +1,8 @@
+<div th:fragment="header(title, cssFile)">
+  <head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/__${cssFile}__.css}" />
+    <meta name="google-adsense-account" content="ca-pub-9634831696243360">
+  </head>
+</div>
