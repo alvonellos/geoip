@@ -1,0 +1,8 @@
+<div id="submit_ip" class="container">
+    <h1>IP Lookup Page</h1>
+    <form th:action="@{/api/iplookup}" method="post">
+        <label for="ip">Enter IP Address:</label>
+        <input type="text" id="ip" name="ip" th:value="${ipAddress}" required>
+        <button type="submit">Lookup</button>
+    </form>
+</div>

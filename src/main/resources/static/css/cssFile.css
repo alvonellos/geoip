@@ -37,3 +37,18 @@ a:hover {
 .button:hover {
     background-color: #54376e; /* Darker purple on hover */
 }
+
+body {
+    background-color: royalpurple;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    margin: 50px;
+}
+.result {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #483d8b; /* DarkSlateBlue */
+    margin-top: 20px;
+}
