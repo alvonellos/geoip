@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jizzed-www #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
+  name: geoip #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
   labels:
-    app: jizzed-www
+    app: geoip
 spec:
   replicas: 2 #The number of pods to be created in the Kubernetes cluster for the React.js application container
   selector:
     matchLabels:
-      app: jizzed-www
+      app: geoip
   template:
     metadata:
       labels:
-        app: jizzed-www
+        app: geoip
     spec:
       containers:
-        - name: jizzed-www #The name of the container
-          image: alvonellos/jizzed-www:$BUILD_NUMBER #The Docker image
+        - name: geoip #The name of the container
+          image: alvonellos/geoip:$BUILD_NUMBER #The Docker image
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

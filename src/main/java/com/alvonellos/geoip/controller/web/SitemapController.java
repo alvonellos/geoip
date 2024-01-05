@@ -19,7 +19,7 @@ public class SitemapController {
     }
 
     private void create(XmlUrlSet xmlUrlSet, String link, XmlUrl.Priority priority) {
-        xmlUrlSet.addUrl(new XmlUrl("https://jizzed.xyz" + link, priority));
+        xmlUrlSet.addUrl(new XmlUrl("https://geoip.home.alvonellos.com" + link, priority));
     }
 
 }
