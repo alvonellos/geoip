@@ -31,6 +31,3 @@ spec:
                 secretKeyRef:
                   name: vault
                   key: TOKEN
-
-
-   #The port for the spring application   container
