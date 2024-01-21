@@ -1,11 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: geoip #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
+  name: geoip
   labels:
     app: geoip
 spec:
-  replicas: 2 #The number of pods to be created in the Kubernetes cluster for the React.js application container
+  replicas: 4
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
   selector:
     matchLabels:
       app: geoip
@@ -15,7 +20,7 @@ spec:
         app: geoip
     spec:
       containers:
-        - name: geoip #The name of the container
+        - name: geoip
           image: alvonellos/geoip:$BUILD_NUMBER #The Docker image
           imagePullPolicy: Always
           ports:

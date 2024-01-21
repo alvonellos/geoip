@@ -56,15 +56,6 @@ pipeline {
                 }
             }
         }
-
-        stage('Delete Old Namespace') {
-            steps {
-                script {
-                    sh "kubectl delete namespace ${kubernetesNamespace} --ignore-not-found=true"
-                }
-            }
-        }
-
        stage('Create New Namespace') {
             steps {
                 script {
@@ -76,10 +67,11 @@ pipeline {
         stage('Copy vault secret') {
             steps {
                 script {
-                    sh "kubectl get secret vault --namespace=default -oyaml | grep -v '^\\s*namespace:\\s' | kubectl apply --namespace=${kubernetesNamespace} -f -"
+                    sh "kubectl get secret vault --namespace=default -o yaml | grep -v '^\\s*namespace:\\s' | kubectl replace --force --namespace=${kubernetesNamespace} -f -"
                 }
             }
         }
+
 
         stage('Deploy to Kubernetes') {
             steps {
