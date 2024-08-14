@@ -1,6 +1,5 @@
 package com.alvonellos.geoip.controller.web;
 
-import com.alvonellos.geoip.service.HitService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
@@ -29,20 +28,15 @@ public class WebsiteController {
         return "forward:/img/favicon.ico";
     }
 
-    private final HitService hitService;
     @GetMapping({"/", "index.html"})
     public String index(HttpServletRequest request, Model model) {
         log.info("Getting index");
-        hitService.registerHit(request);
-        model.addAttribute("hits", hitService.getHitCount());
         return "index";
     }
 
     @GetMapping("/error")
     public String error(HttpServletRequest request, Model model) {
         log.severe("Getting error");
-        hitService.registerHit(request);
-        model.addAttribute("hits", hitService.getHitCount());
         return "error";
     }
 }
