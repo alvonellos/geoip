@@ -24,8 +24,8 @@ spec:
           image: alvonellos/geoip:$BUILD_NUMBER #The Docker image
           imagePullPolicy: Always
           ports:
-            - containerPort: 8084
-              hostPort: 8084
+            - containerPort: 8003
+              hostPort: 8003
               hostIP: 0.0.0.0
               protocol: "TCP"
           env:
